@@ -1,0 +1,254 @@
+[
+    {
+        "District": "Ananthapuramu",
+        "Name": "SP Tucker IAS Retd",
+        "Position": "Former CS AP",
+        "Email": "sptucker1981@gmail.com",
+        "District HQ": "Anantapur",
+        "Old District": "Anantapur",
+        "district_id": "ananthapuramu"
+    },
+    {
+        "District": "Sri Sathya Sai",
+        "Name": "SP Tucker IAS Retd",
+        "Position": "Former CS AP",
+        "Email": "sptucker1981@gmail.com",
+        "District HQ": "Puttaparthi",
+        "Old District": "Anantapur",
+        "district_id": "sri_sathya_sai"
+    },
+    {
+        "District": "Kurnool",
+        "Name": "WR Reddy IAS Retd",
+        "Position": "Former DG NIRD, Kerala",
+        "Email": "wrreddy@gmail.com",
+        "District HQ": "Kurnool",
+        "Old District": "Kurnool",
+        "district_id": "kurnool"
+    },
+    {
+        "District": "Nandyal",
+        "Name": "WR Reddy IAS Retd",
+        "Position": "Former DG NIRD, Kerala",
+        "Email": "wrreddy@gmail.com",
+        "District HQ": "Nandyal",
+        "Old District": "Kurnool",
+        "district_id": "nandyal"
+    },
+    {
+        "District": "YSR Kadapa",
+        "Name": "Ashok Kumar IAS Retd",
+        "Position": "Former Collector Kadapa & former Spl Secy Water Resources GOI",
+        "Email": null,
+        "District HQ": "Kadapa",
+        "Old District": "YSR Kadapa",
+        "district_id": "ysr_kadapa"
+    },
+    {
+        "District": "Chittoor",
+        "Name": "Dr P Raghu IRS Retd",
+        "Position": "Former DG Investigation, member CFD",
+        "Email": "raghup06@gmail.com",
+        "District HQ": "Chittoor",
+        "Old District": "Chittoor",
+        "district_id": "chittoor"
+    },
+    {
+        "District": "Annamayya",
+        "Name": "Dr P Raghu IRS Retd",
+        "Position": "Former DG Investigation, member CFD",
+        "Email": "raghup06@gmail.com",
+        "District HQ": "Rayachoti/Madanapalli",
+        "Old District": "Chittoor",
+        "district_id": "annamayya"
+    },
+    {
+        "District": "Tirupati",
+        "Name": "Dr P Raghu IRS Retd",
+        "Position": "Former DG Investigation, member CFD",
+        "Email": "raghup06@gmail.com",
+        "District HQ": "Tirupati",
+        "Old District": "Chittoor",
+        "district_id": "tirupati"
+    },
+    {
+        "District": "Sri Potti Sriramulu Nellore",
+        "Name": "RS Naik IAS Retd",
+        "Position": "Former Collector Kurnool",
+        "Email": "ramasankar97@gmail.com",
+        "District HQ": "Nellore",
+        "Old District": "Sri Potti Sriramulu Nellore",
+        "district_id": "sri_potti_sriramulu_nellore"
+    },
+    {
+        "District": "Prakasam",
+        "Name": "D Chakrapani IAS Retd",
+        "Position": "Former DG HRD Institute, AP",
+        "Email": "chakrapaniias@gmail.com",
+        "District HQ": "Ongole",
+        "Old District": "Prakasam",
+        "district_id": "prakasam"
+    },
+    {
+        "District": "Guntur",
+        "Name": "GVK Rao IAS Retd",
+        "Position": "Former Chairman Coffee Board & former Advisor AP, Karnataka",
+        "Email": "gvkrishnarau@gmail.com",
+        "District HQ": "Guntur",
+        "Old District": "Guntur",
+        "district_id": "guntur"
+    },
+    {
+        "District": "Bapatla",
+        "Name": "GVK Rao IAS Retd",
+        "Position": "Former Chairman Coffee Board & former Advisor AP, Karnataka",
+        "Email": "gvkrishnarau@gmail.com",
+        "District HQ": "Bapatla",
+        "Old District": "Guntur",
+        "district_id": "bapatla"
+    },
+    {
+        "District": "Palnadu",
+        "Name": "GVK Rao IAS Retd",
+        "Position": "Former Chairman Coffee Board & former Advisor AP, Karnataka",
+        "Email": "gvkrishnarau@gmail.com",
+        "District HQ": "Narasaraopet",
+        "Old District": "Guntur",
+        "district_id": "palnadu"
+    },
+    {
+        "District": "Krishna",
+        "Name": "Dr Rajiv Sarma",
+        "Position": "Former CS Telangana & former Principal Advisor",
+        "Email": "rsharma.ias@gmail.com",
+        "District HQ": "Machilipatnam",
+        "Old District": "Krishna",
+        "district_id": "krishna"
+    },
+    {
+        "District": "NTR",
+        "Name": "Dr Rajiv Sarma",
+        "Position": "Former CS Telangana & former Principal Advisor",
+        "Email": "rsharma.ias@gmail.com",
+        "District HQ": "Vijayawada",
+        "Old District": "Krishna",
+        "district_id": "ntr"
+    },
+    {
+        "District": "Krishna",
+        "Name": "T Suresh Babu",
+        "Position": "MEA - GOI & former Ambassador to Mongolia",
+        "Email": "arnimarao@yahoo.co.in",
+        "District HQ": "Machilipatnam",
+        "Old District": "Krishna",
+        "district_id": "krishna"
+    },
+    {
+        "District": "NTR",
+        "Name": "T Suresh Babu",
+        "Position": "MEA - GOI & former Ambassador to Mongolia",
+        "Email": "arnimarao@yahoo.co.in",
+        "District HQ": "Vijayawada",
+        "Old District": "Krishna",
+        "district_id": "ntr"
+    },
+    {
+        "District": "West Godavari",
+        "Name": "Smt A Lakshmi",
+        "Position": "Retd District Judge",
+        "Email": "adabala.lakshmi@gmail.com",
+        "District HQ": "Bhimavaram",
+        "Old District": "West Godavari",
+        "district_id": "west_godavari"
+    },
+    {
+        "District": "Eluru",
+        "Name": "Smt A Lakshmi",
+        "Position": "Retd District Judge",
+        "Email": "adabala.lakshmi@gmail.com",
+        "District HQ": "Eluru",
+        "Old District": "West Godavari",
+        "district_id": "eluru"
+    },
+    {
+        "District": "Kakinada",
+        "Name": "Sokandan Kumar Krishnan IAS Retd",
+        "Position": "Former Additional Secretary Home & former Advisor to Governor J&K",
+        "Email": "skandan56@gmail.com",
+        "District HQ": "Kakinada",
+        "Old District": "East Godavari",
+        "district_id": "kakinada"
+    },
+    {
+        "District": "Dr. B.R. Ambedkar Konaseema",
+        "Name": "Sokandan Kumar Krishnan IAS Retd",
+        "Position": "Former Additional Secretary Home & former Advisor to Governor J&K",
+        "Email": "skandan56@gmail.com",
+        "District HQ": "Amalapuram",
+        "Old District": "East Godavari",
+        "district_id": "dr_b_r_ambedkar_konaseema"
+    },
+    {
+        "District": "East Godavari",
+        "Name": "Sokandan Kumar Krishnan IAS Retd",
+        "Position": "Former Additional Secretary Home & former Advisor to Governor J&K",
+        "Email": "skandan56@gmail.com",
+        "District HQ": "Rajahmundry",
+        "Old District": "East Godavari",
+        "district_id": "east_godavari"
+    },
+    {
+        "District": "Visakhapatnam",
+        "Name": "Dr Dalip Singh",
+        "Position": "Former Secretary Steel & Mines & former SEC Haryana",
+        "Email": "dalip1982@outlook.com",
+        "District HQ": "Visakhapatnam",
+        "Old District": "Visakhapatnam",
+        "district_id": "visakhapatnam"
+    },
+    {
+        "District": "Anakapalli",
+        "Name": "Dr Dalip Singh",
+        "Position": "Former Secretary Steel & Mines & former SEC Haryana",
+        "Email": "dalip1982@outlook.com",
+        "District HQ": "Anakapalli",
+        "Old District": "Visakhapatnam",
+        "district_id": "anakapalli"
+    },
+    {
+        "District": "Alluri Sitharama Raju",
+        "Name": "Dr Dalip Singh",
+        "Position": "Former Secretary Steel & Mines & former SEC Haryana",
+        "Email": "dalip1982@outlook.com",
+        "District HQ": "Paderu",
+        "Old District": "Visakhapatnam",
+        "district_id": "alluri_sitharama_raju"
+    },
+    {
+        "District": "Vizianagaram",
+        "Name": "Ajay Mishra IAS Retd",
+        "Position": "Former Spl CS & presently Chairman Redcross Telangana",
+        "Email": "misraajay2020@gmail.com",
+        "District HQ": "Vizianagaram",
+        "Old District": "Vizianagaram",
+        "district_id": "vizianagaram"
+    },
+    {
+        "District": "Srikakulam",
+        "Name": "CBS Venkataramana IAS Retd",
+        "Position": "Former Spl Secretary Atomic Energy",
+        "Email": "balasatya@hotmail.com",
+        "District HQ": "Srikakulam",
+        "Old District": "Srikakulam",
+        "district_id": "srikakulam"
+    },
+    {
+        "District": "Parvathipuram Manyam",
+        "Name": "Ajay Mishra IAS Retd",
+        "Position": "Former Spl CS & presently Chairman Redcross Telangana",
+        "Email": "misraajay2020@gmail.com",
+        "District HQ": "Parvathipuram",
+        "Old District": "Vizianagaram",
+        "district_id": "parvathipuram_manyam"
+    }
+]
