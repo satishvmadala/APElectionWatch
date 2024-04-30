@@ -1,0 +1,151 @@
+/* ### GLOBAL ### */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body, #root, html {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+  width: 100vw;
+  height: fit-content;
+  min-height: 100.06vh;
+  background-color: #FFF;
+}
+
+.side-nav{
+    height: 100vh;
+    width: 100%;
+}
+.brand-name{
+    margin-bottom: 40px;
+}
+.side-nav-text{
+    height: 95vh;
+    display: block !important;
+    padding: 0px 10px !important;
+}
+.side-nav-sub{
+    flex-direction: column !important;
+}
+.side-nav-sub svg{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.navbar-toggler:focus{
+    box-shadow: none !important;
+}
+.side-nav-div{
+    width: 95px !important;
+    padding: 0px !important;
+    position: fixed;
+}
+.side-nav-sub{
+    overflow-x: hidden;
+}
+.side-nav-sub .nav-link{
+    width: 350px;
+    margin-top: 10px;
+}
+.side-nav-div:hover{
+    width: 380px !important;
+    z-index: 99;
+}
+/*.side-nav-div:hover .brand-word{
+    font-size: 1rem;
+}
+.side-nav-div:hover .breakpoint{
+    display: none;
+}*/
+.side-cont-div{
+    width: 93% !important;
+    position: relative;
+    left: 7%;
+}
+.brand-word{
+    font-size: .6rem;
+    font-weight: bold;
+    width: 20px;
+}
+.navbar-collapse{
+    padding: 0px 15px !important;
+}
+.clr-green{
+    color: #006e00;
+}
+.clr-yellow{
+    color: #d19100;
+}
+.header-margin{
+    margin-top: 3rem !important;
+}
+.table-responsive{
+    overflow-x: scroll !important;
+}
+
+@media (max-width:767px){
+    .side-nav-div{
+        width: 100% !important;
+        z-index: 9999;
+    }
+    .side-nav-div:hover {
+        width: 100% !important;
+        z-index: 99;
+    }
+    .side-cont-div{
+        width: 100% !important;
+        left: 0%;
+    } 
+    .side-nav{
+        height: auto;
+    }
+    .side-nav-text{
+        height: auto;
+        display: flex !important;
+    }
+    .brand-name{
+        margin-bottom: 0px;
+    }
+    .breakpoint{
+        display: none;
+    }
+    .brand-word{
+        font-size: 1.3rem;
+    }
+    .side-nav-div:hover .brand-word{
+        font-size: 1.3rem;
+    }
+    .header-margin{
+        margin-top: 7rem !important;
+    }
+    .table-responsive-sm{
+        overflow-x: scroll !important;
+    }
+}

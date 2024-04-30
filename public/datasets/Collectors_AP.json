@@ -1,0 +1,290 @@
+[
+    {
+        "District": "Alluri Sitharama Raju",
+        "Designation": "Collector",
+        "Name": "Sumit Kumar",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Alluri Sitharama Raju",
+        "Designation": "Joint Collector",
+        "Name": "J. Siva Srinivasu",
+        "Date of Joining": "04-08-2022"
+    },
+    {
+        "District": "Anakapalli",
+        "Designation": "Collector",
+        "Name": "Pattanshetti Ravi Subash",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Anakapalli",
+        "Designation": "Joint Collector",
+        "Name": "Medida Jahnavi",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Ananthapuramu",
+        "Designation": "Collector",
+        "Name": "Smt. M. Gauthami",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Ananthapuramu",
+        "Designation": "Joint Collector",
+        "Name": "Ketan Garg",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Chittoor",
+        "Designation": "Collector",
+        "Name": "Sagili Shan Mohan",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Chittoor",
+        "Designation": "Joint Collector",
+        "Name": "P. Sreenivasulu",
+        "Date of Joining": "15-04-2023"
+    },
+    {
+        "District": "East Godavari",
+        "Designation": "Collector",
+        "Name": "Smt. K.Madhavi Latha",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "East Godavari",
+        "Designation": "Joint Collector",
+        "Name": "N. Tej Bharath",
+        "Date of Joining": "28-11-2022"
+    },
+    {
+        "District": "Eluru",
+        "Designation": "Collector",
+        "Name": "Prasanna Venkatesh V",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Eluru",
+        "Designation": "Joint Collector",
+        "Name": "Smt. B. Lavanya Veni",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Guntur",
+        "Designation": "Collector",
+        "Name": "M. Venugopal Reddy",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Guntur",
+        "Designation": "Joint Collector",
+        "Name": "G Raja Kumari",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Kakinada",
+        "Designation": "Collector",
+        "Name": "Krithika Shukla",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Kakinada",
+        "Designation": "Joint Collector",
+        "Name": "Ms. Ilakkiya S",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Dr. B.R. Ambedkar Konaseema",
+        "Designation": "Collector",
+        "Name": "Himanshu Shukla",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Dr. B.R. Ambedkar Konaseema",
+        "Designation": "Joint Collector",
+        "Name": "Shrivas Nupur Ajaykumar",
+        "Date of Joining": "28-07-2023"
+    },
+    {
+        "District": "Krishna",
+        "Designation": "Collector",
+        "Name": "P. Raja Babu",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Krishna",
+        "Designation": "Joint Collector",
+        "Name": "Aparajita Singh Sinsinwar",
+        "Date of Joining": "28-11-2022"
+    },
+    {
+        "District": "Kurnool",
+        "Designation": "Collector",
+        "Name": "Smt. Srijana Gummalla",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Kurnool",
+        "Designation": "Joint Collector",
+        "Name": "Narapureddy Mourya",
+        "Date of Joining": "12-04-2023"
+    },
+    {
+        "District": "Nandyal",
+        "Designation": "Collector",
+        "Name": "Dr. Manazir Jeelani Samoon",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Nandyal",
+        "Designation": "Joint Collector",
+        "Name": "Tatimakula Rahul Kumar Reddy",
+        "Date of Joining": "28-07-2023"
+    },
+    {
+        "District": "NTR",
+        "Designation": "Collector",
+        "Name": "S. Dilli Rao",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "NTR",
+        "Designation": "Joint Collector",
+        "Name": "P Sampath Kumar",
+        "Date of Joining": "15-04-2023"
+    },
+    {
+        "District": "Palnadu",
+        "Designation": "Collector",
+        "Name": "Siva Sankar Lotheti",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Palnadu",
+        "Designation": "Joint Collector",
+        "Name": "A Shyam Prasad",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Parvathipuram Manyam",
+        "Designation": "Collector",
+        "Name": "Nishant Kumar",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Parvathipuram Manyam",
+        "Designation": "Joint Collector",
+        "Name": "R. Govinda Rao",
+        "Date of Joining": "22-05-2023"
+    },
+    {
+        "District": "Prakasam",
+        "Designation": "Collector",
+        "Name": "Dinesh Kumar A.S.",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Prakasam",
+        "Designation": "Joint Collector",
+        "Name": "Dr. K. Srinivasulu",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Sri Potti Sriramulu Nellore",
+        "Designation": "Collector",
+        "Name": "M.Hari Narayanan",
+        "Date of Joining": "12-04-2023"
+    },
+    {
+        "District": "Sri Potti Sriramulu Nellore",
+        "Designation": "Joint Collector",
+        "Name": "Ronanki Kurmanath",
+        "Date of Joining": "29-06-2022"
+    },
+    {
+        "District": "Sri Sathya Sai",
+        "Designation": "Collector",
+        "Name": "P.Arun Babu",
+        "Date of Joining": "10-04-2023"
+    },
+    {
+        "District": "Sri Sathya Sai",
+        "Designation": "Joint Collector",
+        "Name": "Chetan T S",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Srikakulam",
+        "Designation": "Collector",
+        "Name": "Lathkar Shrikesh Balajirao",
+        "Date of Joining": "07-06-2021"
+    },
+    {
+        "District": "Srikakulam",
+        "Designation": "Joint Collector",
+        "Name": "Mallarapu Naveen",
+        "Date of Joining": "10-10-2022"
+    },
+    {
+        "District": "Tirupati",
+        "Designation": "Collector",
+        "Name": "K. Venkata Ramana Reddy",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Tirupati",
+        "Designation": "Joint Collector",
+        "Name": "Balaji D K",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Visakhapatnam",
+        "Designation": "Collector",
+        "Name": "Dr. Mallikarjuna.A",
+        "Date of Joining": "24-07-2021"
+    },
+    {
+        "District": "Visakhapatnam",
+        "Designation": "Joint Collector",
+        "Name": "K S Viswanathan",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "Vizianagaram",
+        "Designation": "Collector",
+        "Name": "Nagalakshmi S",
+        "Date of Joining": "12-04-2023"
+    },
+    {
+        "District": "Vizianagaram",
+        "Designation": "Joint Collector",
+        "Name": "Kathawate Mayur Ashok",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "West Godavari",
+        "Designation": "Collector",
+        "Name": "Smt. P.Prasanthi",
+        "Date of Joining": "04-04-2022"
+    },
+    {
+        "District": "West Godavari",
+        "Designation": "Joint Collector",
+        "Name": "S. Rama Sundar Reddy",
+        "Date of Joining": "14-04-2023"
+    },
+    {
+        "District": "YSR Kadapa",
+        "Designation": "Collector",
+        "Name": "Vijay Rama Raju V",
+        "Date of Joining": "24-07-2021"
+    },
+    {
+        "District": "YSR Kadapa",
+        "Designation": "Joint Collector",
+        "Name": "Gummala Ganesh Kumar",
+        "Date of Joining": "15-04-2023"
+    }
+]
