@@ -24,13 +24,12 @@ export default function N () {
           <Nav className="me-auto side-nav-sub">
             <Nav.Link href="/"><FaHome /> Home </Nav.Link>
             <li class="nav-item">
-            <Link to="/eci" className="nav-link"> <FaBeer />Eci</Link>
+            <Link to="/eci" className="nav-link"><FaBeer /> Eci</Link>
             </li>
             
-            <Nav.Link href="/"><FaBuilding /> Parliamentary Constituencies</Nav.Link>
 
             <li class="nav-item">
-            <Link to="/assembly" className="nav-link"><FaBlog /> Assembly</Link>
+            <Link to="/districts" className="nav-link"><FaBlog /> Districts</Link>
         </li>
             
             <Nav.Link href="/"><FaPhone /> Contact</Nav.Link>

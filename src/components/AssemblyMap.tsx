@@ -87,10 +87,11 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         //   mapClick(id)
         // })
         .on("mouseover", (event: any, d: any) => {
+          console.log()
+          let id = d.properties.ac_name;
           
-          let id = d.properties.AC_NAME;
           id = id.toString();
-          mapClick(id)
+          mapClick(id, d.properties.district_id)
           tooltip.transition()
             .duration(200)
             .style("display", "block");
@@ -106,7 +107,7 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
             .style("top", `${event.pageY - 40}px`);
         })
         .on("mouseout", () => {
-          mapClick("")
+          mapClick("", "")
           tooltip.transition()
             .duration(500)
             .style("display", "none");

@@ -28,7 +28,6 @@
     "react-i18next": "^13.1.2",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.23.0",
-    
     "sirv": "^2.0.4"
   },
   "devDependencies": {

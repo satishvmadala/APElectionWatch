@@ -15,10 +15,10 @@ return <HashRouter>
       <Routes>
         
 
-          <Route path="/" element={<Home />} />
+          <Route path="/districts" element={<Home />} />
           
 
-          <Route path="/assembly" element={<Assembly />} />
+          <Route path="/" element={<Assembly />} />
           <Route path="/eci" element={<Eci />} />
         
       </Routes>
