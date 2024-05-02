@@ -8,7 +8,7 @@ import Assembly from './Assembly';
 import Districts from './Districts'
 import {  HashRouter, Routes, Route } from "react-router-dom";
 import Eci from './Eci'
-import Home from './Districts';
+
 
 const App = () =>{
 
