@@ -23,7 +23,7 @@ const DefaultElectionWatchMember = ()=> {
     return  <>
     
     <div className="mt-4">
-    <h6>Election Watch Members</h6>
+    <h6>Election Watch Functionaries</h6>
     </div>
     <Table striped bordered size="sm">
       <thead>
@@ -155,7 +155,7 @@ const Assembly = () => {
         watchMember = <div className="table-responsive-sm">
 
         <h5>
-          District Watch Member
+          Election Watch Functionary
         </h5>
     
         <Table striped bordered size="sm">
