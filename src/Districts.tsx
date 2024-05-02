@@ -341,7 +341,6 @@ const Home = () => {
     if(districtId=="") {
       setDistrictContent(undefined);
     }
-    
   }
 
 

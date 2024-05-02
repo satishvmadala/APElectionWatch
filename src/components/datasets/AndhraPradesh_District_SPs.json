@@ -1,0 +1,210 @@
+[
+    {
+        "sl_no": 1,
+        "zone": "Zone 1",
+        "district": "Srikakulam",
+        "name_of_the_sp": "G.R.Radhika",
+        "email_id": "sp@skl.appolice.gov.in",
+        "district_id": "srikakulam"
+    },
+    {
+        "sl_no": 2,
+        "zone": "Zone 1",
+        "district": "Vizianagaram",
+        "name_of_the_sp": "Smt. M.Deepika",
+        "email_id": "spvzm@appolice.gov.in",
+        "district_id": "vizianagaram"
+    },
+    {
+        "sl_no": 1,
+        "zone": "Zone 1",
+        "district": "Parvathipuram Manyam",
+        "name_of_the_sp": "Vikrant Patil",
+        "email_id": "sppvpmanyam@gmail.com",
+        "district_id": "parvathipuram_manyam"
+    },
+    {
+        "sl_no": 4,
+        "zone": "Zone 1",
+        "district": "Alluri Sitharama Raju",
+        "name_of_the_sp": "Tuhin Sinha",
+        "email_id": "sp.asr123@gmail.com",
+        "district_id": "alluri_sitharama_raju"
+    },
+    {
+        "sl_no": 5,
+        "zone": "Zone 1",
+        "district": "Visakhapatnam",
+        "name_of_the_sp": "Ravi Shankar",
+        "email_id": "cp@vspc.appolice.gov.in",
+        "district_id": "visakhapatnam"
+    },
+    {
+        "sl_no": 6,
+        "zone": "Zone 1",
+        "district": "Anakapalli",
+        "name_of_the_sp": "Gowthami Sali",
+        "email_id": "sppvpmanyam@gmail.com",
+        "district_id": "anakapalli"
+    },
+    {
+        "sl_no": 7,
+        "zone": "Zone 2",
+        "district": "Kakinada",
+        "name_of_the_sp": "Sathish Kumar",
+        "email_id": "sp@kkd.appolice.gov.in",
+        "district_id": "kakinada"
+    },
+    {
+        "sl_no": 8,
+        "zone": "Zone 2",
+        "district": "Dr. B.R. Ambedkar Konaseema",
+        "name_of_the_sp": "S. Sreedhar",
+        "email_id": "spkonaseema@gmail.com",
+        "district_id": "dr_b_r_ambedkar_konaseema"
+    },
+    {
+        "sl_no": 2,
+        "zone": "Zone 2",
+        "district": "East Godavari",
+        "name_of_the_sp": "Jagadeesh P",
+        "email_id": "sp@rjyu.appolice.gov.in",
+        "district_id": "east_godavari"
+    },
+    {
+        "sl_no": 10,
+        "zone": "Zone 2",
+        "district": "West Godavari",
+        "name_of_the_sp": "U.Ravi Prakash",
+        "email_id": "spwgbvrm@gmail.com",
+        "district_id": "west_godavari"
+    },
+    {
+        "sl_no": 11,
+        "zone": "Zone 2",
+        "district": "Eluru",
+        "name_of_the_sp": "D.Mary Prasanthi",
+        "email_id": "sp@wg.appolice.gov.in, westgodavarisp@gmail.com",
+        "district_id": "eluru"
+    },
+    {
+        "sl_no": 12,
+        "zone": "Zone 3",
+        "district": "Krishna",
+        "name_of_the_sp": "P.Joshua",
+        "email_id": "sp@kri.appolice.gov.in, spkrishnadist@gmail.com",
+        "district_id": "krishna"
+    },
+    {
+        "sl_no": 13,
+        "zone": "Zone 3",
+        "district": "NTR",
+        "name_of_the_sp": "Shri Kanthi Rana Tata",
+        "email_id": "cp@vza.appolice.gov.in",
+        "district_id": "ntr"
+    },
+    {
+        "sl_no": 14,
+        "zone": "Zone 3",
+        "district": "Guntur",
+        "name_of_the_sp": "K.Arif Hafeez",
+        "email_id": "sp@gtr.appolice.gov.in, guntururbansp@gmail.com",
+        "district_id": "guntur"
+    },
+    {
+        "sl_no": 15,
+        "zone": "Zone 3",
+        "district": "Bapatla",
+        "name_of_the_sp": "Sri Vakul Jindal",
+        "email_id": "sp@bpt.appolice.gov.in",
+        "district_id": "bapatla"
+    },
+    {
+        "sl_no": 16,
+        "zone": "Zone 3",
+        "district": "Palnadu",
+        "name_of_the_sp": "Sri Y. Ravi Sankara Reddy",
+        "email_id": "spgunturrural@gmail.com",
+        "district_id": "palnadu"
+    },
+    {
+        "sl_no": 17,
+        "zone": "Zone 4",
+        "district": "Prakasam",
+        "name_of_the_sp": "Malika Garg",
+        "email_id": "spongole@gmail.com",
+        "district_id": "prakasam"
+    },
+    {
+        "sl_no": 18,
+        "zone": "Zone 4",
+        "district": "Sri Potti Sriramulu Nellore",
+        "name_of_the_sp": "K.Tirumaleswar Reddy",
+        "email_id": "nelloresp@gmail.com",
+        "district_id": "sri_potti_sriramulu_nellore"
+    },
+    {
+        "sl_no": 19,
+        "zone": "Zone 5",
+        "district": "Kurnool",
+        "name_of_the_sp": "G. Krishnakanth",
+        "email_id": "spkurnool.kur@gmail.com",
+        "district_id": "kurnool"
+    },
+    {
+        "sl_no": 20,
+        "zone": "Zone 5",
+        "district": "Nandyal",
+        "name_of_the_sp": "Sri K.Raghuveera Reddy",
+        "email_id": "spnandyal.official@gmail.com",
+        "district_id": "nandyal"
+    },
+    {
+        "sl_no": 21,
+        "zone": "Zone 5",
+        "district": "Ananthapuramu",
+        "name_of_the_sp": "Anburajan Kkn",
+        "email_id": "spatp1@gmail.com",
+        "district_id": "ananthapuramu"
+    },
+    {
+        "sl_no": 3,
+        "zone": "Zone 5",
+        "district": "Sri Sathya Sai",
+        "name_of_the_sp": "S.V. Madhav Reddy",
+        "email_id": "spsss1ptp@gmail.com",
+        "district_id": "sri_sathya_sai"
+    },
+    {
+        "sl_no": 23,
+        "zone": "Zone 5",
+        "district": "YSR Kadapa",
+        "name_of_the_sp": "Siddharth Kaushal",
+        "email_id": "spkadapa2014@gmail.com",
+        "district_id": "ysr_kadapa"
+    },
+    {
+        "sl_no": 24,
+        "zone": "Zone 4",
+        "district": "Annamayya",
+        "name_of_the_sp": "B.Krishna Rao",
+        "email_id": "spannamayyadistrict@gmail.com",
+        "district_id": "annamayya"
+    },
+    {
+        "sl_no": 25,
+        "zone": "Zone 4",
+        "district": "Chittoor",
+        "name_of_the_sp": "Y.Rishanth Reddy",
+        "email_id": "spctr@appolice.gov.in, apchittoor@gmail.com",
+        "district_id": "chittoor"
+    },
+    {
+        "sl_no": 26,
+        "zone": "Zone 4",
+        "district": "Tirupati",
+        "name_of_the_sp": "Sri P Parameshwar Reddy",
+        "email_id": "sptpturban@gmail.com",
+        "district_id": "tirupati"
+    }
+]

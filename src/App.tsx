@@ -5,9 +5,10 @@ import './index.css'
 import 'bootswatch/dist/lux/bootstrap.min.css'; 
 
 import Assembly from './Assembly';
-import Home from './Home'
+import Districts from './Districts'
 import {  HashRouter, Routes, Route } from "react-router-dom";
 import Eci from './Eci'
+import Home from './Districts';
 
 const App = () =>{
 
@@ -15,7 +16,7 @@ return <HashRouter>
       <Routes>
         
 
-          <Route path="/districts" element={<Home />} />
+          <Route path="/districts" element={<Districts />} />
           
 
           <Route path="/" element={<Assembly />} />

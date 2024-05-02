@@ -13,7 +13,9 @@ import Table from 'react-bootstrap/Table';
 
 import cData from './components/datasets/DSPs_in_Constituencies.json'; 
 import eData from './components/datasets/AP_EROS.json'; 
-import wData from './components/datasets/AP_Election_Watch_Members.json'
+import wData from './components/datasets/AP_Election_Watch_Members.json';
+import dData from './components/datasets/DEO_2024_Corrected.json';
+import sData from './components/datasets/AndhraPradesh_District_SPs.json';
 
 const DefaultElectionWatchMember = ()=> {
 
@@ -66,11 +68,15 @@ const Assembly = () => {
   const [constituencyDSPData, setConstituencyDSPData] = useState([])
   const [constituencyEROData, setConstituencyEROData] = useState([])
   const [watchMemberData, setWatchMemberData] = useState([])
+  const [constituencyDEOData,setConstituencyDEOData] = useState([])
+  const [constituencySPData,setConstituencySPData] = useState([])
 
   useEffect(() => {
     setConstituencyDSPData(cData);
     setConstituencyEROData(eData)
     setWatchMemberData(wData)
+    setConstituencyDEOData(dData)
+    setConstituencySPData(sData)
   }, []); 
   
 
@@ -84,8 +90,65 @@ const Assembly = () => {
     const constituency = constituencyDSPData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
     const defaultEro = constituencyEROData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
     const districtWatchMember = watchMemberData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
+    const defaultDeo = constituencyDEOData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
+    const defaultSp = constituencySPData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     
     console.log('distr', districtWatchMember)
+
+
+    let DeoMember
+    if(defaultDeo){
+        DeoMember = <div className="table-responsive-sm">
+
+        <h5>
+          District Election Officer
+        </h5>
+    
+        <Table striped bordered size="sm">
+      <thead>
+        <tr>
+        <th>Name</th>
+          <th>Position</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>{defaultDeo.Name}</td>
+          <td>{defaultDeo.Designation}</td>
+          <td>{defaultDeo.Mobile_No}</td>
+        </tr>
+        
+      </tbody>
+    </Table>
+    </div>
+    }
+
+    let SPMember
+    if(defaultSp){
+        SPMember = <div className="table-responsive-sm">
+
+        <h5>
+          Superintendent of Police
+        </h5>
+    
+        <Table striped bordered size="sm">
+      <thead>
+        <tr>
+        <th>Name</th>
+          <th>Email-ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>{defaultSp.name_of_the_sp}</td>
+          <td>{defaultSp.email_id}</td>
+        </tr>
+        
+      </tbody>
+    </Table>
+    </div>
+    }
 
     let watchMember
     if(districtWatchMember){
@@ -100,7 +163,6 @@ const Assembly = () => {
         <tr>
         <th>Name</th>
           <th>Designation</th>
-          
           <th>Contact</th>
         </tr>
       </thead>
@@ -207,7 +269,15 @@ const Assembly = () => {
   </tbody>
 </Table>
 
+
+
+
 </div>
+
+
+
+
+
 
 
 
@@ -252,6 +322,8 @@ const Assembly = () => {
            <div> {eroContent}</div>
            <div> {dspContent}</div>
            <div>{watchMember}</div>
+           <div>{DeoMember}</div>
+           <div>{SPMember}</div>
             </>
             
         
