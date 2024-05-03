@@ -16,6 +16,9 @@ import eData from './components/datasets/AP_EROS.json';
 import wData from './components/datasets/AP_Election_Watch_Members.json';
 import dData from './components/datasets/DEO_2024_Corrected.json';
 import sData from './components/datasets/AndhraPradesh_District_SPs.json';
+import gData from './components/datasets/General_Observers_2024.json';
+import exData from './components/datasets/Expenditure_Observers.json';
+import poData from './components/datasets/Police_Observers_2024.json;'
 
 const DefaultElectionWatchMember = ()=> {
 
@@ -66,10 +69,11 @@ const Assembly = () => {
   const [districtId, setDistrictId] = useState("")
   
   const [constituencyDSPData, setConstituencyDSPData] = useState([])
-  const [constituencyEROData, setConstituencyEROData] = useState([])
+  const [constituencyROData, setConstituencyEROData] = useState([])
   const [watchMemberData, setWatchMemberData] = useState([])
   const [constituencyDEOData,setConstituencyDEOData] = useState([])
   const [constituencySPData,setConstituencySPData] = useState([])
+  const [constituencyGOData,setConstituencyGOData] = useState([])
 
   useEffect(() => {
     setConstituencyDSPData(cData);
@@ -77,23 +81,47 @@ const Assembly = () => {
     setWatchMemberData(wData)
     setConstituencyDEOData(dData)
     setConstituencySPData(sData)
+    setConstituencyGOData(gData,exData)
   }, []); 
   
-
-
-
-
-
-
   const RightContainer = ()=>{
 
     const constituency = constituencyDSPData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
-    const defaultEro = constituencyEROData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
+    const defaultro = constituencyROData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
     const districtWatchMember = watchMemberData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     const defaultDeo = constituencyDEOData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     const defaultSp = constituencySPData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
+    const defaultGo = constituencyGOData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     
     console.log('distr', districtWatchMember)
+
+
+    let GoMember
+    if(defaultGo){
+        GoMember = <div className="table-responsive-sm">
+
+        <h5>
+          Observers
+        </h5>
+    
+        <Table striped bordered size="sm">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{defaultGo.observer_name}</td>
+          <td>{defaultGo.service}</td>
+          <td>{defaultGo.Personal_Number}</td>
+        </tr>
+      </tbody>
+    </Table>
+    </div>
+    }
 
 
     let DeoMember
@@ -232,19 +260,19 @@ const Assembly = () => {
     }
     
 
-    const eroContent = <Table striped bordered size="sm">
+    const roContent = <Table striped bordered size="sm">
     <thead>
     <h6></h6>
       <tr>
-        <th>ERO Name</th>
+        <th>RO Name</th>
         <th>Contact</th>
         
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{defaultEro?.ero_name}</td>
-        <td>{defaultEro?.mobile_no}</td>       
+        <td>{defaultro?.ero_name}</td>
+        <td>{defaultro?.mobile_no}</td>       
       </tr>
     </tbody>
   </Table>
@@ -270,16 +298,7 @@ const Assembly = () => {
 </Table>
 
 
-
-
 </div>
-
-
-
-
-
-
-
 
     if(constituency) {
         dspContent = <div>
@@ -318,17 +337,16 @@ const Assembly = () => {
             <h3>
           {constituencyId}
           </h3>
-
-           <div> {eroContent}</div>
-           <div> {dspContent}</div>
-           <div>{watchMember}</div>
+          <div>
            <div>{DeoMember}</div>
            <div>{SPMember}</div>
+           <div>{GoMember}</div>
+           <div>{watchMember}</div>
+           <div>{roContent}</div>
+           <div>{dspContent}</div>
+          </div>
             </>
-            
-        
     }
-      
     </div>
   }
 
@@ -343,6 +361,14 @@ const Assembly = () => {
   }
   
 
+  function BelowMapContainer () {
+    return (
+      {/*<div>
+        <div>{roContent}</div>
+        <div>{dspContent}</div>
+    </div>*/}
+    );
+  }
 
 
   return (

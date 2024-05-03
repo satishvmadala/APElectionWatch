@@ -86,32 +86,25 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         //   id = id.toString();
         //   mapClick(id)
         // })
-        .on("mouseover", (event: any, d: any) => {
-          console.log()
+        .on("click", (event: any, d: any) => {
           let id = d.properties.ac_name;
-          
           id = id.toString();
-          mapClick(id, d.properties.district_id)
+          mapClick(id, d.properties.district_id);
           tooltip.transition()
-            .duration(200)
-            .style("display", "block");
+              .duration(200)
+              .style("display", "block");
           tooltip.html(() => {
-            
-            if (id.length === 1) { id = '0' + id; }
-            // let cantonData: ParsedData = data.filter((item) => item.id === id)[0];
-            // let cantonData = id;
-            // return `${cantonData.name}: ${cantonData.value}`;
-            return id;
+              if (id.length === 1) { id = '0' + id; }
+              return id;
           })
-            .style("left", `${event.pageX + 10}px`)
-            .style("top", `${event.pageY - 40}px`);
-        })
-        .on("mouseout", () => {
-          mapClick("", "")
+          .style("left", `${event.pageX + 10}px`)
+          .style("top", `${event.pageY - 40}px`);
+      })
+      .on("mouseout", () => {
           tooltip.transition()
-            .duration(500)
-            .style("display", "none");
-        });;
+              .duration(500)
+              .style("display", "none");
+      });
 
       /* ### End of actual map code ### */
 
