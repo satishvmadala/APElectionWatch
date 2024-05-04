@@ -475,8 +475,8 @@ const Assembly = () => {
             <Row>
               <Col lg="6" md="12">
               <AssemblyMap link={dataset.link} map={dataset.map} mapClick={mapClick} propName={"assembly"}/>
-              <DefaultObservers constituencyId={constituencyId} clsName={'d-sm-none d-md-block'}/>
-              <MapBottomContainer clsName={'d-sm-none d-md-block'}/>
+              <DefaultObservers constituencyId={constituencyId} clsName={'d-none d-lg-block'}/>
+              <MapBottomContainer clsName={'d-none d-lg-block'}/>
               </Col>
               <Col lg="6" md="12" className="table-responsive-sm">
                 <DefaultMembersContainer constituencyId={constituencyId}/>
@@ -485,8 +485,8 @@ const Assembly = () => {
             </Row>
             <Row>
             <Col lg="6" md="12">
-            <DefaultObservers constituencyId={constituencyId} clsName={' d-md-none'}/>
-              <MapBottomContainer clsName={' d-md-none'}/>
+            <DefaultObservers constituencyId={constituencyId} clsName={' d-lg-none'}/>
+              <MapBottomContainer clsName={' d-lg-none'}/>
              </Col>
               
             </Row>
