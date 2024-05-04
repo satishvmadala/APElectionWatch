@@ -20,6 +20,47 @@ import generalObserversData from './components/datasets/General_Observers_2024.j
 import expendituresObserversData from './components/datasets/Expenditure_Observers.json';
 import policeObserversData from './components/datasets/Police_Observers_2024.json';
 
+const DefaultObservers = ({constituencyId})=> {
+
+
+  return  <div className={constituencyId?.length >0 ? 'd-none': 'd-block' }>
+  
+  <div className="mt-4">
+  <h6>State Election Observers</h6>
+  </div>
+  <Table striped bordered size="sm">
+    <thead>
+      <tr>
+      <th>Role</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+        Observer General
+        </td>
+        <td>Sri Ram Mohan Mishra</td>
+        <td>IAS Rtd</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+        Liason Officer for Observer General
+        </td>
+        <td>Sri Raju</td>
+        <td>Forest Settlement Officer</td>
+        <td></td>
+      </tr>
+      
+      </tbody>
+  </Table>
+  </div>
+
+}
+
 const DefaultElectionWatchMember = ()=> {
 
 
@@ -57,6 +98,67 @@ CFD
         </tbody>
     </Table>
     </>
+
+}
+
+
+
+const DefaultMembersContainer = ({constituencyId}) =>{
+    
+    
+  return <div className={constituencyId?.length >0 ? 'd-none': 'd-block' }><div className="table-responsive-sm">
+
+        <h4>
+          CEO Office
+        </h4>
+    
+        <Table striped bordered size="sm">
+      <thead>
+        <tr>
+          
+          <th>Designation</th>
+          <th>Name</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          
+          <td>Chief Electoral Officer</td>
+          <td>Sri Mukesh Kumar Meena</td>
+          <td>ceo_andhrapradesh@eci.gov.in 08632445360</td>
+        </tr>
+        <tr>
+          
+          <td>Addl CEO</td>
+          <td>Sri Harindra Prasad</td>
+          <td>Peshi +919059450530</td>
+        </tr>
+        <tr>
+          
+          <td>Addl CEO</td>
+          <td>Sri Koteswararao</td>
+          <td>Peshi +917075491431</td>
+    
+        </tr>
+    
+        <tr>
+          
+          <td>Joint CEO</td>
+          <td>Sri Venkateswararao</td>
+          <td>ceo_andhrapradesh@eci.gov.in</td>
+          
+        </tr>
+      </tbody>
+    </Table>
+
+    <DefaultElectionWatchMember />
+
+  
+    </div>
+    </div>
+
+
 
 }
 
@@ -164,6 +266,8 @@ const Assembly = () => {
 
 
     return <div className={clsName}> 
+
+<DefaultObservers constituencyId={constituencyId} />
 
     {constituencyId && 
     
@@ -313,58 +417,7 @@ const Assembly = () => {
     </div>
     }
 
-    let  ceoOffice
-    
-    if(constituencyId == "") {
-            ceoOffice  = <div className="table-responsive-sm">
-
-            <h4>
-              CEO Office
-            </h4>
-        
-            <Table striped bordered size="sm">
-          <thead>
-            <tr>
-              
-              <th>Designation</th>
-              <th>Name</th>
-              <th>Contact</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              
-              <td>Chief Electoral Officer</td>
-              <td>Sri Mukesh Kumar Meena</td>
-              <td>ceo_andhrapradesh@eci.gov.in 08632445360</td>
-            </tr>
-            <tr>
-              
-              <td>Addl CEO</td>
-              <td>Sri Harindra Prasad</td>
-              <td>Peshi +919059450530</td>
-            </tr>
-            <tr>
-              
-              <td>Addl CEO</td>
-              <td>Sri Koteswararao</td>
-              <td>Peshi +917075491431</td>
-        
-            </tr>
-        
-            <tr>
-              
-              <td>Joint CEO</td>
-              <td>Sri Venkateswararao</td>
-              <td>ceo_andhrapradesh@eci.gov.in</td>
-              
-            </tr>
-          </tbody>
-        </Table>
-
-        <DefaultElectionWatchMember />
-        </div>
-    }
+  
     
 
    
@@ -373,7 +426,6 @@ const Assembly = () => {
 
     return <div> 
 
-    {ceoOffice}
     {constituencyId && 
     
             <>
@@ -427,6 +479,7 @@ const Assembly = () => {
               <MapBottomContainer clsName={'d-sm-none d-md-block'}/>
               </Col>
               <Col lg="6" md="12" className="table-responsive-sm">
+                <DefaultMembersContainer constituencyId={constituencyId}/>
               <RightContainer />
               </Col>
             </Row>
