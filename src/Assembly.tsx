@@ -136,6 +136,14 @@ const DefaultMembersContainer = ({constituencyId}) =>{
           <td>Sri Mukesh Kumar Meena</td>
           <td>ceo_andhrapradesh@eci.gov.in 08632445360</td>
         </tr>
+
+        <tr>
+          
+          <td>PS to CEO</td>
+          <td>Sri Sirisha</td>
+          <td>+918978837853</td>
+        </tr>
+
         <tr>
           
           <td>Addl CEO</td>
