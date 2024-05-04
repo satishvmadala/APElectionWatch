@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
-import Container from 'react-bootstrap/Container';
+//import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { data } from './data.js';
 import { FaSearch } from "react-icons/fa";
 
 function App() {
-  const [contacts, setContacts] = useState(data);
+  //const [contacts, setContacts] = useState(data);
   const [search, setSearch] = useState('');
 
   return (

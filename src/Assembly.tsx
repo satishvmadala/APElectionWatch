@@ -20,9 +20,9 @@ import generalObserversData from './components/datasets/General_Observers_2024.j
 import expendituresObserversData from './components/datasets/Expenditure_Observers.json';
 import policeObserversData from './components/datasets/Police_Observers_2024.json';
 
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { FaSearch } from "react-icons/fa";
+//import Form from 'react-bootstrap/Form';
+//import InputGroup from 'react-bootstrap/InputGroup';
+//import { FaSearch } from "react-icons/fa";
 import Filter from './Filter';
 
 const DefaultObservers = ({constituencyId, clsName})=> {
