@@ -23,12 +23,12 @@ export default function N () {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto side-nav-sub">
             <Nav.Link href="/"><FaHome /> Home </Nav.Link>
-            <li class="nav-item">
+            <li className="nav-item">
             <Link to="/eci" className="nav-link"><FaBeer /> Eci</Link>
             </li>
             
 
-            <li class="nav-item">
+            <li className="nav-item">
             <Link to="/districts" className="nav-link"><FaBlog /> Districts</Link>
         </li>
             

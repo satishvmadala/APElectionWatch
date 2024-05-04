@@ -86,12 +86,12 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         //   id = id.toString();
         //   mapClick(id)
         // })
-        .on("click, mouseover", (event: any, d: any) => {
+        .on("mouseover", (event: any, d: any) => {
+          console.log(event.type)
           let id = d.properties.ac_name;
           id = id.toString();
           let districtId = d.properties.district_id
-          mapClick(id, d.properties.district_id);
-          console.log("tootl", tooltip)
+          //mapClick(id, d.properties.district_id);
           tooltip.transition()
               .duration(200)
               .style("display", "block");
@@ -105,6 +105,25 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
           .style("top", `${event.pageY - 40}px`);
           
       })
+      .on("click", (event: any, d: any) => {
+        console.log(event.type)
+        let id = d.properties.ac_name;
+        id = id.toString();
+        let districtId = d.properties.district_id
+        mapClick(id, d.properties.district_id);
+        tooltip.transition()
+            .duration(200)
+            .style("display", "block");
+
+        tooltip.html(() => {
+            if (id.length === 1) { id = '0' + id; }
+            console.log('IDDD', id)
+            return id + "-" + districtId;
+        })
+        .style("left", `${event.pageX + 10}px`)
+        .style("top", `${event.pageY - 40}px`);
+        
+    })
       .on("mouseout", () => {
           tooltip.transition()
               .duration(500)

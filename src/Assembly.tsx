@@ -219,7 +219,7 @@ const Assembly = () => {
 
     <Table striped bordered size="sm">
   <thead>
-  <h6></h6>
+  
     <tr>
       
       <th>DSP Name</th>
@@ -241,7 +241,7 @@ const Assembly = () => {
         dspContent = <div>
         <Table striped bordered size="sm">
       <thead>
-      <h6></h6>
+      
         <tr>
           
           <th>DSP Name</th>
