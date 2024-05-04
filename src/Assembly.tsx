@@ -475,7 +475,7 @@ const Assembly = () => {
         </div>
         <div className='side-cont-div'>
           <Container>
-          <Filter />
+          <Filter mapClick={mapClick} />
             <Row>
               <Col>
               <h2 className="header-margin">AP Assembly Constituencies</h2>

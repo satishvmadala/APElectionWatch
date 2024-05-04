@@ -18,11 +18,7 @@ return <HashRouter>
 
       <Route path="/" element={<Assembly />} />        
       <Route path="/eci" element={<Eci />} />
-    <Route path="/districts" element={<Districts />} />
-          
-
-          
-        
+      <Route path="/districts" element={<Districts />} />
       </Routes>
     </HashRouter>
 

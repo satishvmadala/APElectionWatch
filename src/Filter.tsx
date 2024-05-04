@@ -3,60 +3,56 @@ import Table from 'react-bootstrap/Table';
 //import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { data } from './data.js';
+import AndhraData from './components/datasets/Final_Andhra_Constituencies_2024.json';
 import { FaSearch } from "react-icons/fa";
 
-function App() {
+function App({mapClick}) {
   //const [contacts, setContacts] = useState(data);
   const [search, setSearch] = useState('');
+  const [showFilterData, setShowFilterData] = useState(false)
+
+  const selectDristrict = (item)=>{
+
+    setSearch(item.ac_name)
+    setShowFilterData(false)
+    mapClick(item.constituency_id, item.district_id);
+  }
+  
 
   return (
-    <div>
-      <div>
-        {/*<h1 className='text-center mt-4'>CONSTITUENCY</h1>*/}
+    <>
         <Form>
           <InputGroup className='my-3'>
           <InputGroup.Text className="search-icon" id="basic-addon1"> <FaSearch /> </InputGroup.Text>
             <Form.Control
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder='Search'
+              value={search}
+              onChange={(e) => {setSearch(e.target.value); setShowFilterData(true)}}
+              placeholder='Search Constituency'
             />
           </InputGroup>
         </Form>
-        {search && (
-          <div className="table-responsive-sm">
-          <Table striped bordered hover size="sm">
-            <thead>
-              <tr>
-                <th>Constituency Name</th>
-                <th>Officer Name</th>
-                <th>Mobile No</th>
-                <th>Email</th>
-                <th>District</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data
-                .filter((item) => {
-                  return search.toLowerCase() === ''
-                    ? item
-                    : item.ac_name.toLowerCase().includes(search) || item.district_id.toLowerCase().includes(search);
-                })
-                .map((item, index) => (
-                  <tr key={index}>
-                    <td>{item.ac_name}</td>
-                    <td>{item.ero_name}</td>
-                    <td>{item.mobile_no}</td>
-                    <td>{item.E_mail}</td>
-                    <td>{item.district_id}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </Table>
-          </div>
+        {search && showFilterData && (
+          <ul className="list-group position-absolute">
+          {AndhraData
+            .filter((item) => {
+              return search.toLowerCase() === ''
+                ? item
+                : item.ac_name.toLowerCase().includes(search);
+            })
+            .slice(0,5)
+            .map((item, index) => (
+              <li className="list-group-item" key={index} onClick={ ()=>{ selectDristrict(item) }}>
+                {item.ac_name} - {item.district_name} District
+              </li>
+            ))
+            
+            }
+        
+      </ul>
+          
         )}
-      </div>
-    </div>
+      
+    </>
   );
 }
 
