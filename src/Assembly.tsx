@@ -16,9 +16,9 @@ import eData from './components/datasets/AP_EROS.json';
 import wData from './components/datasets/AP_Election_Watch_Members.json';
 import dData from './components/datasets/DEO_2024_Corrected.json';
 import sData from './components/datasets/AndhraPradesh_District_SPs.json';
-import gData from './components/datasets/General_Observers_2024.json';
-import exData from './components/datasets/Expenditure_Observers.json';
-import poData from './components/datasets/Police_Observers_2024.json;'
+import generalObserversData from './components/datasets/General_Observers_2024.json';
+import expendituresObserversData from './components/datasets/Expenditure_Observers.json';
+import policeObserversData from './components/datasets/Police_Observers_2024.json';
 
 const DefaultElectionWatchMember = ()=> {
 
@@ -74,6 +74,8 @@ const Assembly = () => {
   const [constituencyDEOData,setConstituencyDEOData] = useState([])
   const [constituencySPData,setConstituencySPData] = useState([])
   const [constituencyGOData,setConstituencyGOData] = useState([])
+  const [constituencyExData,setConstituencyExData] = useState([])
+  const [constituencyPOData,setConstituencyPOData] = useState([])
 
   useEffect(() => {
     setConstituencyDSPData(cData);
@@ -81,24 +83,115 @@ const Assembly = () => {
     setWatchMemberData(wData)
     setConstituencyDEOData(dData)
     setConstituencySPData(sData)
-    setConstituencyGOData(gData,exData)
+    setConstituencyGOData(generalObserversData)
+    setConstituencyExData(expendituresObserversData)
+    setConstituencyPOData(policeObserversData)
   }, []); 
-  
-  const RightContainer = ()=>{
+
+
+  const MapBottomContainer = ({clsName})=>{
 
     const constituency = constituencyDSPData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
     const defaultro = constituencyROData.find((i)=>i.constituency_id.toLowerCase() == constituencyId.toLowerCase())
+    
+   
+
+    const roContent = <Table striped bordered size="sm">
+    <thead>
+    
+      <tr>
+        <th>RO Name</th>
+        <th>Contact</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{defaultro?.ero_name}</td>
+        <td>{defaultro?.mobile_no}</td>       
+      </tr>
+    </tbody>
+  </Table>
+
+    let dspContent = <div>    
+
+    <Table striped bordered size="sm">
+  <thead>
+  <h6></h6>
+    <tr>
+      
+      <th>DSP Name</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ramesh</td>
+      <td>94409 06871</td>
+    </tr>
+  </tbody>
+</Table>
+
+
+</div>
+
+    if(constituency) {
+        dspContent = <div>
+        <Table striped bordered size="sm">
+      <thead>
+      <h6></h6>
+        <tr>
+          
+          <th>DSP Name</th>
+          
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          
+          <td>{constituency.dsp_name}</td>
+          <td>{constituency.mobile_no}</td>
+          
+        </tr>
+        
+      </tbody>
+    </Table>
+
+    </div>
+    }
+
+
+
+    return <div className={clsName}> 
+
+    {constituencyId && 
+    
+            <>
+            
+          <div >
+           
+           <div>{roContent}</div>
+           <div>{dspContent}</div>
+          </div>
+            </>
+    }
+    </div>
+  }
+
+  
+  const RightContainer = ()=>{
+
     const districtWatchMember = watchMemberData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     const defaultDeo = constituencyDEOData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     const defaultSp = constituencySPData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     const defaultGo = constituencyGOData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     
-    console.log('distr', districtWatchMember)
+    const defaultExpObserver = constituencyExData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
+    const defaultPoliceObserver = constituencyPOData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
 
 
-    let GoMember
-    if(defaultGo){
-        GoMember = <div className="table-responsive-sm">
+    let GoMember = <div className="table-responsive-sm">
 
         <h5>
           Observers
@@ -107,6 +200,7 @@ const Assembly = () => {
         <Table striped bordered size="sm">
       <thead>
         <tr>
+          <th>Role</th>
           <th>Name</th>
           <th>Position</th>
           <th>Contact</th>
@@ -114,14 +208,27 @@ const Assembly = () => {
       </thead>
       <tbody>
         <tr>
-          <td>{defaultGo.observer_name}</td>
-          <td>{defaultGo.service}</td>
-          <td>{defaultGo.Personal_Number}</td>
+        <td>General Observer</td>
+          <td>{defaultGo?.observer_name}</td>
+          <td>{defaultGo?.service}</td>
+          <td>{defaultGo?.Personal_Number}</td>
+        </tr>
+        <tr>
+        <td>Police Observer</td>
+          <td>{defaultPoliceObserver?.observer_name}</td>
+          <td>{defaultPoliceObserver?.service}</td>
+          <td>{defaultPoliceObserver?.personal_number}</td>
+        </tr>
+        <tr>
+        <td>Expenditure Observer</td>
+          <td>{defaultExpObserver?.name}</td>
+          <td>{defaultExpObserver?.service}</td>
+          <td>{defaultExpObserver?.phone_no}</td>
         </tr>
       </tbody>
     </Table>
     </div>
-    }
+    
 
 
     let DeoMember
@@ -260,71 +367,7 @@ const Assembly = () => {
     }
     
 
-    const roContent = <Table striped bordered size="sm">
-    <thead>
-    <h6></h6>
-      <tr>
-        <th>RO Name</th>
-        <th>Contact</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{defaultro?.ero_name}</td>
-        <td>{defaultro?.mobile_no}</td>       
-      </tr>
-    </tbody>
-  </Table>
-
-    let dspContent = <div>    
-
-    <Table striped bordered size="sm">
-  <thead>
-  <h6></h6>
-    <tr>
-      
-      <th>DSP Name</th>
-      
-      <th>Contact</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ramesh</td>
-      <td>94409 06871</td>
-    </tr>
-  </tbody>
-</Table>
-
-
-</div>
-
-    if(constituency) {
-        dspContent = <div>
-        <Table striped bordered size="sm">
-      <thead>
-      <h6></h6>
-        <tr>
-          
-          <th>DSP Name</th>
-          
-          <th>Contact</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          
-          <td>{constituency.dsp_name}</td>
-          <td>{constituency.mobile_no}</td>
-          
-        </tr>
-        
-      </tbody>
-    </Table>
-
-    </div>
-    }
+   
 
 
 
@@ -338,12 +381,11 @@ const Assembly = () => {
           {constituencyId}
           </h3>
           <div>
-           <div>{DeoMember}</div>
-           <div>{SPMember}</div>
-           <div>{GoMember}</div>
-           <div>{watchMember}</div>
-           <div>{roContent}</div>
-           <div>{dspContent}</div>
+           <div className="mt-4">{DeoMember}</div>
+           <div className="mt-4">{SPMember}</div>
+           <div className="mt-4">{GoMember}</div>
+           <div className="mt-4">{watchMember}</div>
+           
           </div>
             </>
     }
@@ -354,21 +396,12 @@ const Assembly = () => {
 
   const mapClick = (constituencyId: string, districtId: string) =>{
 
-    console.log('map cli', constituencyId, districtId)
     setconstituencyId(constituencyId);
     setDistrictId(districtId);
     
   }
   
 
-  function BelowMapContainer () {
-    return (
-      {/*<div>
-        <div>{roContent}</div>
-        <div>{dspContent}</div>
-    </div>*/}
-    );
-  }
 
 
   return (
@@ -391,10 +424,17 @@ const Assembly = () => {
             <Row>
               <Col lg="6" md="12">
               <AssemblyMap link={dataset.link} map={dataset.map} mapClick={mapClick} propName={"assembly"}/>
+              <MapBottomContainer clsName={'d-sm-none d-md-block'}/>
               </Col>
               <Col lg="6" md="12" className="table-responsive-sm">
               <RightContainer />
               </Col>
+            </Row>
+            <Row>
+            <Col lg="6" md="12">
+              <MapBottomContainer clsName={' d-md-none'}/>
+              </Col>
+              
             </Row>
             <Row>
               <Col>

@@ -14,13 +14,13 @@ const App = () =>{
 
 return <HashRouter>
       <Routes>
-        
 
-          <Route path="/districts" element={<Districts />} />
+      <Route path="/" element={<Assembly />} />        
+      <Route path="/eci" element={<Eci />} />
+    <Route path="/districts" element={<Districts />} />
           
 
-          <Route path="/" element={<Assembly />} />
-          <Route path="/eci" element={<Eci />} />
+          
         
       </Routes>
     </HashRouter>
