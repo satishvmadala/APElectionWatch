@@ -185,6 +185,7 @@ const Assembly = () => {
   
   const [constituencyId, setconstituencyId] = useState("")   
   const [districtId, setDistrictId] = useState("")
+  const [districtName, setDistrictName] = useState("")
   
   const [constituencyDSPData, setConstituencyDSPData] = useState([])
   const [constituencyROData, setConstituencyEROData] = useState([])
@@ -444,9 +445,9 @@ const Assembly = () => {
     {constituencyId && 
     
             <>
-            <h3>
-          {constituencyId}
-          </h3>
+            <div>
+          <span className="h3">{constituencyId}</span> - <span className="h4">{districtName} District</span>
+          </div>
           <div>
            <div className="mt-4">{DeoMember}</div>
            <div className="mt-4">{SPMember}</div>
@@ -461,11 +462,11 @@ const Assembly = () => {
 
 
 
-  const mapClick = (constituencyId: string, districtId: string) =>{
+  const mapClick = (constituencyId: string, districtId: string, districtName: string) =>{
 
     setconstituencyId(constituencyId);
     setDistrictId(districtId);
-    
+    setDistrictName(districtName)
   }
   
 

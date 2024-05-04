@@ -110,7 +110,8 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         let id = d.properties.ac_name;
         id = id.toString();
         let districtId = d.properties.district_id
-        mapClick(id, d.properties.district_id);
+        let districtName = d.properties.district_name
+        mapClick(id, d.properties.district_id, districtName);
         tooltip.transition()
             .duration(200)
             .style("display", "block");

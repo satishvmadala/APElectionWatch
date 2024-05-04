@@ -9,7 +9,7 @@ import Assembly from './Assembly';
 import Districts from './Districts'
 import {  HashRouter, Routes, Route } from "react-router-dom";
 import Eci from './Eci'
-
+import CitizenComplaints from './CitizenComplaints'
 
 const App = () =>{
 
@@ -18,6 +18,7 @@ return <HashRouter>
 
       <Route path="/" element={<Assembly />} />        
       <Route path="/eci" element={<Eci />} />
+      <Route path="/citizen-complaints" element={<CitizenComplaints />} />
       <Route path="/districts" element={<Districts />} />
       </Routes>
     </HashRouter>

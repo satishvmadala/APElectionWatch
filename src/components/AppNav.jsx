@@ -9,6 +9,7 @@ import { FaHome } from "react-icons/fa";
 import { FaBuilding } from "react-icons/fa";
 import { FaBlog } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
+import { VscFeedback } from "react-icons/vsc";
 
 export default function N () {
 
@@ -26,11 +27,14 @@ export default function N () {
             <li className="nav-item">
             <Link to="/eci" className="nav-link"><FaBeer /> Eci</Link>
             </li>
-            
 
             <li className="nav-item">
+            <Link to="/citizen-complaints" className="nav-link"><VscFeedback /> Citizen Complaints</Link>
+            </li>
+            
+            <li className="nav-item">
             <Link to="/districts" className="nav-link"><FaBlog /> Districts</Link>
-        </li>
+            </li>
             
             <Nav.Link href="/"><FaPhone /> Contact</Nav.Link>
           </Nav>
