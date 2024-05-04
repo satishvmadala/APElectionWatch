@@ -124,6 +124,31 @@ body, #root, html {
 .table-responsive{
     overflow-x: scroll !important;
 }
+.search-icon{
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+    background-color: #f7f7f9 !important;
+    padding: 0.75rem 0.75rem !important;
+    border-radius: 8px !important;
+}
+.search-btn{
+    position: absolute  !important;
+    right: 0px  !important;
+    z-index: 9999;
+    border-bottom-right-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+.form-control{
+    padding-left: 2.5rem !important;
+    padding-right: 7rem !important;
+    border-radius: 8px !important;
+}
+.form-control:focus {
+    border-color: #ccc !important;
+    box-shadow: 0 0 0 1px #ccc !important;
+}
+
 
 @media (max-width:767px){
     .side-nav-div{

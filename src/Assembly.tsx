@@ -20,6 +20,11 @@ import generalObserversData from './components/datasets/General_Observers_2024.j
 import expendituresObserversData from './components/datasets/Expenditure_Observers.json';
 import policeObserversData from './components/datasets/Police_Observers_2024.json';
 
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import { FaSearch } from "react-icons/fa";
+import Filter from './Filter';
+
 const DefaultObservers = ({constituencyId, clsName})=> {
 
 
@@ -38,22 +43,25 @@ const DefaultObservers = ({constituencyId, clsName})=> {
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-        Observer General
-        </td>
-        <td>Sri Ram Mohan Mishra</td>
-        <td>IAS Rtd</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-        Liason Officer for Observer General
-        </td>
-        <td>Sri Raju</td>
-        <td>Forest Settlement Officer</td>
-        <td></td>
-      </tr>
+
+    <tr>
+<td>Observer General</td>
+<td>Sri Ram Mohan Mishra</td>
+<td>IAS Rtd</td>
+<td></td>
+</tr>
+
+<tr><td>Liason Officer for Observer General</td>
+<td>Sri Raju</td><td>Forest Settlement Officer</td>
+<td>+919398567858</td></tr>
+
+<tr><td>Observer General Police</td>
+<td>Sri Rajiv Mishra</td><td>IPS Retd</td>
+<td></td></tr>
+
+<tr><td>Liason for Observer General Police</td>
+<td>Sri Ravi Kumar</td><td>Addl SP</td>
+<td>+919154966496</td></tr>
       
       </tbody>
   </Table>
@@ -109,7 +117,7 @@ const DefaultMembersContainer = ({constituencyId}) =>{
   return <div className={constituencyId?.length >0 ? 'd-none': 'd-block' }><div className="table-responsive-sm">
 
         <h4>
-          CEO Office
+          AP - CEO Office
         </h4>
     
         <Table striped bordered size="sm">
@@ -467,9 +475,10 @@ const Assembly = () => {
         </div>
         <div className='side-cont-div'>
           <Container>
+          <Filter />
             <Row>
               <Col>
-              <h2 className="header-margin">Assembly Constituencies</h2>
+              <h2 className="header-margin">AP Assembly Constituencies</h2>
               </Col>
             </Row>
             <Row>
