@@ -1,8 +1,9 @@
 
-import './index.css'
+
 
 // import PickDataMenu from './components/PickDataMenu';
 import 'bootswatch/dist/lux/bootstrap.min.css'; 
+import './index.css'
 
 import Assembly from './Assembly';
 import Districts from './Districts'

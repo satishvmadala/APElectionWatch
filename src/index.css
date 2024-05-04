@@ -26,6 +26,21 @@ body, #root, html {
   align-items: center;
   justify-content: center;
 }
+.canton {
+    cursor: pointer;
+  }
+  
+  .canton:hover {
+    stroke-width: 1px !important;
+  }
+.tooltip5 {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: block;
+  }
 
 .App {
   /*display: flex;

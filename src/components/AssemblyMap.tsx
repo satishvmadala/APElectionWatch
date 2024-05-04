@@ -48,8 +48,8 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
 
     const tooltip = d3.select("body")
       .append("div")
-      .attr("class", "tooltip")
-      .style("display", "none");
+      .attr("class", "tooltip5")
+      
 
     const drawD3Map = (topo: any, parsed: ParserOutput) => {
       const { smallest, biggest } = parsed;
@@ -86,19 +86,24 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         //   id = id.toString();
         //   mapClick(id)
         // })
-        .on("click", (event: any, d: any) => {
+        .on("click, mouseover", (event: any, d: any) => {
           let id = d.properties.ac_name;
           id = id.toString();
+          let districtId = d.properties.district_id
           mapClick(id, d.properties.district_id);
+          console.log("tootl", tooltip)
           tooltip.transition()
               .duration(200)
               .style("display", "block");
+
           tooltip.html(() => {
               if (id.length === 1) { id = '0' + id; }
-              return id;
+              console.log('IDDD', id)
+              return id + "-" + districtId;
           })
           .style("left", `${event.pageX + 10}px`)
           .style("top", `${event.pageY - 40}px`);
+          
       })
       .on("mouseout", () => {
           tooltip.transition()
