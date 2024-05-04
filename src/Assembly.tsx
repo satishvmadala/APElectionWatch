@@ -20,10 +20,10 @@ import generalObserversData from './components/datasets/General_Observers_2024.j
 import expendituresObserversData from './components/datasets/Expenditure_Observers.json';
 import policeObserversData from './components/datasets/Police_Observers_2024.json';
 
-const DefaultObservers = ({constituencyId})=> {
+const DefaultObservers = ({constituencyId, clsName})=> {
 
 
-  return  <div className={constituencyId?.length >0 ? 'd-none': 'd-block' }>
+  return <div className={clsName}> <div className={constituencyId.length >0 ? 'd-none': 'd-block'}>
   
   <div className="mt-4">
   <h6>State Election Observers</h6>
@@ -58,7 +58,7 @@ const DefaultObservers = ({constituencyId})=> {
       </tbody>
   </Table>
   </div>
-
+  </div>
 }
 
 const DefaultElectionWatchMember = ()=> {
@@ -267,7 +267,6 @@ const Assembly = () => {
 
     return <div className={clsName}> 
 
-<DefaultObservers constituencyId={constituencyId} />
 
     {constituencyId && 
     
@@ -476,6 +475,7 @@ const Assembly = () => {
             <Row>
               <Col lg="6" md="12">
               <AssemblyMap link={dataset.link} map={dataset.map} mapClick={mapClick} propName={"assembly"}/>
+              <DefaultObservers constituencyId={constituencyId} clsName={'d-sm-none d-md-block'}/>
               <MapBottomContainer clsName={'d-sm-none d-md-block'}/>
               </Col>
               <Col lg="6" md="12" className="table-responsive-sm">
@@ -485,8 +485,9 @@ const Assembly = () => {
             </Row>
             <Row>
             <Col lg="6" md="12">
+            <DefaultObservers constituencyId={constituencyId} clsName={' d-md-none'}/>
               <MapBottomContainer clsName={' d-md-none'}/>
-              </Col>
+             </Col>
               
             </Row>
             <Row>
