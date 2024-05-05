@@ -111,6 +111,7 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         id = id.toString();
         let districtId = d.properties.district_id
         let districtName = d.properties.district_name
+        console.log('distrnanem', districtName)
         mapClick(id, d.properties.district_id, districtName);
         tooltip.transition()
             .duration(200)

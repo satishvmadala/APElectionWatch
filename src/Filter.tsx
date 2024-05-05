@@ -15,7 +15,7 @@ function App({mapClick}) {
 
     setSearch(item.ac_name)
     setShowFilterData(false)
-    mapClick(item.constituency_id, item.district_id);
+    mapClick(item.constituency_id, item.district_id, item.district_name);
   }
   
 
