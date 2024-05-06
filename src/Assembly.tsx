@@ -448,7 +448,7 @@ const Assembly = () => {
             <>
             <div>
           <span className="h3">{constituencyId}</span> - <span className="h3">{districtName} District</span><br></br>
-          <span className="h5">{loksabhaName}</span>
+          <span className="h5">{loksabhaName} Parliament</span>
           </div>
           <div>
            <div className="mt-4">{DeoMember}</div>
