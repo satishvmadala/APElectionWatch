@@ -17,6 +17,474 @@ const Home = () => {
   const [dataset,] = useState<Dataset>(DatasetList[0]);
   const [districtId, setDistrictId] = useState("")
   const [districtContent, setDistrictContent] = useState(undefined)
+  const [districtSP,setDistrictSP] = useState(undefined)
+  const [districtEWM,setDistrictEWM] = useState(undefined)
+
+  const Ewm = [
+      {
+          "District": "Ananthapuramu",
+          "Name": "SP Tucker IAS Retd",
+          "Position": "Former CS AP",
+          "Email": "sptucker1981@gmail.com",
+          "District HQ": "Anantapur",
+          "Old District": "Anantapur",
+          "district_id": "ananthapuramu"
+      },
+      {
+          "District": "Sri Sathya Sai",
+          "Name": "SP Tucker IAS Retd",
+          "Position": "Former CS AP",
+          "Email": "sptucker1981@gmail.com",
+          "District HQ": "Puttaparthi",
+          "Old District": "Anantapur",
+          "district_id": "sri_sathya_sai"
+      },
+      {
+          "District": "Kurnool",
+          "Name": "WR Reddy IAS Retd",
+          "Position": "Former DG NIRD, Kerala",
+          "Email": "wrreddy@gmail.com",
+          "District HQ": "Kurnool",
+          "Old District": "Kurnool",
+          "district_id": "kurnool"
+      },
+      {
+          "District": "Nandyal",
+          "Name": "WR Reddy IAS Retd",
+          "Position": "Former DG NIRD, Kerala",
+          "Email": "wrreddy@gmail.com",
+          "District HQ": "Nandyal",
+          "Old District": "Kurnool",
+          "district_id": "nandyal"
+      },
+      {
+          "District": "YSR Kadapa",
+          "Name": "Ashok Kumar IAS Retd",
+          "Position": "Former Collector Kadapa & former Spl Secy Water Resources GOI",
+          "Email": null,
+          "District HQ": "Kadapa",
+          "Old District": "YSR Kadapa",
+          "district_id": "ysr_kadapa"
+      },
+      {
+          "District": "Chittoor",
+          "Name": "Dr P Raghu IRS Retd",
+          "Position": "Former DG Investigation, member CFD",
+          "Email": "raghup06@gmail.com",
+          "District HQ": "Chittoor",
+          "Old District": "Chittoor",
+          "district_id": "chittoor"
+      },
+      {
+          "District": "Annamayya",
+          "Name": "Dr P Raghu IRS Retd",
+          "Position": "Former DG Investigation, member CFD",
+          "Email": "raghup06@gmail.com",
+          "District HQ": "Rayachoti/Madanapalli",
+          "Old District": "Chittoor",
+          "district_id": "annamayya"
+      },
+      {
+          "District": "Tirupati",
+          "Name": "Dr P Raghu IRS Retd",
+          "Position": "Former DG Investigation, member CFD",
+          "Email": "raghup06@gmail.com",
+          "District HQ": "Tirupati",
+          "Old District": "Chittoor",
+          "district_id": "tirupati"
+      },
+      {
+          "District": "Sri Potti Sriramulu Nellore",
+          "Name": "RS Naik IAS Retd",
+          "Position": "Former Collector Kurnool",
+          "Email": "ramasankar97@gmail.com",
+          "District HQ": "Nellore",
+          "Old District": "Sri Potti Sriramulu Nellore",
+          "district_id": "sri_potti_sriramulu_nellore"
+      },
+      {
+          "District": "Prakasam",
+          "Name": "D Chakrapani IAS Retd",
+          "Position": "Former DG HRD Institute, AP",
+          "Email": "chakrapaniias@gmail.com",
+          "District HQ": "Ongole",
+          "Old District": "Prakasam",
+          "district_id": "prakasam"
+      },
+      {
+          "District": "Guntur",
+          "Name": "GVK Rao IAS Retd",
+          "Position": "Former Chairman Coffee Board & former Advisor AP, Karnataka",
+          "Email": "gvkrishnarau@gmail.com",
+          "District HQ": "Guntur",
+          "Old District": "Guntur",
+          "district_id": "guntur"
+      },
+      {
+          "District": "Bapatla",
+          "Name": "GVK Rao IAS Retd",
+          "Position": "Former Chairman Coffee Board & former Advisor AP, Karnataka",
+          "Email": "gvkrishnarau@gmail.com",
+          "District HQ": "Bapatla",
+          "Old District": "Guntur",
+          "district_id": "bapatla"
+      },
+      {
+          "District": "Palnadu",
+          "Name": "GVK Rao IAS Retd",
+          "Position": "Former Chairman Coffee Board & former Advisor AP, Karnataka",
+          "Email": "gvkrishnarau@gmail.com",
+          "District HQ": "Narasaraopet",
+          "Old District": "Guntur",
+          "district_id": "palnadu"
+      },
+      {
+          "District": "Krishna",
+          "Name": "Dr Rajiv Sarma",
+          "Position": "Former CS Telangana & former Principal Advisor",
+          "Email": "rsharma.ias@gmail.com",
+          "District HQ": "Machilipatnam",
+          "Old District": "Krishna",
+          "district_id": "krishna"
+      },
+      {
+          "District": "NTR",
+          "Name": "Dr Rajiv Sarma",
+          "Position": "Former CS Telangana & former Principal Advisor",
+          "Email": "rsharma.ias@gmail.com",
+          "District HQ": "Vijayawada",
+          "Old District": "Krishna",
+          "district_id": "ntr"
+      },
+      {
+          "District": "Krishna",
+          "Name": "T Suresh Babu",
+          "Position": "MEA - GOI & former Ambassador to Mongolia",
+          "Email": "arnimarao@yahoo.co.in",
+          "District HQ": "Machilipatnam",
+          "Old District": "Krishna",
+          "district_id": "krishna"
+      },
+      {
+          "District": "NTR",
+          "Name": "T Suresh Babu",
+          "Position": "MEA - GOI & former Ambassador to Mongolia",
+          "Email": "arnimarao@yahoo.co.in",
+          "District HQ": "Vijayawada",
+          "Old District": "Krishna",
+          "district_id": "ntr"
+      },
+      {
+          "District": "West Godavari",
+          "Name": "Smt A Lakshmi",
+          "Position": "Retd District Judge",
+          "Email": "adabala.lakshmi@gmail.com",
+          "District HQ": "Bhimavaram",
+          "Old District": "West Godavari",
+          "district_id": "west_godavari"
+      },
+      {
+          "District": "Eluru",
+          "Name": "Smt A Lakshmi",
+          "Position": "Retd District Judge",
+          "Email": "adabala.lakshmi@gmail.com",
+          "District HQ": "Eluru",
+          "Old District": "West Godavari",
+          "district_id": "eluru"
+      },
+      {
+          "District": "Kakinada",
+          "Name": "Skandan Kumar Krishnan IAS Retd",
+          "Position": "Former Additional Secretary Home & former Advisor to Governor J&K",
+          "Email": "skandan56@gmail.com",
+          "District HQ": "Kakinada",
+          "Old District": "East Godavari",
+          "district_id": "kakinada"
+      },
+      {
+          "District": "Dr. B.R. Ambedkar Konaseema",
+          "Name": "Skandan Kumar Krishnan IAS Retd",
+          "Position": "Former Additional Secretary Home & former Advisor to Governor J&K",
+          "Email": "skandan56@gmail.com",
+          "District HQ": "Amalapuram",
+          "Old District": "East Godavari",
+          "district_id": "dr_b_r_ambedkar_konaseema"
+      },
+      {
+          "District": "East Godavari",
+          "Name": "Skandan Kumar Krishnan IAS Retd",
+          "Position": "Former Additional Secretary Home & former Advisor to Governor J&K",
+          "Email": "skandan56@gmail.com",
+          "District HQ": "Rajahmundry",
+          "Old District": "East Godavari",
+          "district_id": "east_godavari"
+      },
+      {
+          "District": "Visakhapatnam",
+          "Name": "Dr Dalip Singh",
+          "Position": "Former Secretary Steel & Mines & former SEC Haryana",
+          "Email": "dalip1982@outlook.com",
+          "District HQ": "Visakhapatnam",
+          "Old District": "Visakhapatnam",
+          "district_id": "visakhapatnam"
+      },
+      {
+          "District": "Anakapalli",
+          "Name": "Dr Dalip Singh",
+          "Position": "Former Secretary Steel & Mines & former SEC Haryana",
+          "Email": "dalip1982@outlook.com",
+          "District HQ": "Anakapalli",
+          "Old District": "Visakhapatnam",
+          "district_id": "anakapalli"
+      },
+      {
+          "District": "Alluri Sitharama Raju",
+          "Name": "Dr Dalip Singh",
+          "Position": "Former Secretary Steel & Mines & former SEC Haryana",
+          "Email": "dalip1982@outlook.com",
+          "District HQ": "Paderu",
+          "Old District": "Visakhapatnam",
+          "district_id": "alluri_sitharama_raju"
+      },
+      {
+          "District": "Vizianagaram",
+          "Name": "Ajay Mishra IAS Retd",
+          "Position": "Former Spl CS & presently Chairman Redcross Telangana",
+          "Email": "misraajay2020@gmail.com",
+          "District HQ": "Vizianagaram",
+          "Old District": "Vizianagaram",
+          "district_id": "vizianagaram"
+      },
+      {
+          "District": "Srikakulam",
+          "Name": "CBS Venkataramana IAS Retd",
+          "Position": "Former Spl Secretary Atomic Energy",
+          "Email": "balasatya@hotmail.com",
+          "District HQ": "Srikakulam",
+          "Old District": "Srikakulam",
+          "district_id": "srikakulam"
+      },
+      {
+          "District": "Parvathipuram Manyam",
+          "Name": "Ajay Mishra IAS Retd",
+          "Position": "Former Spl CS & presently Chairman Redcross Telangana",
+          "Email": "misraajay2020@gmail.com",
+          "District HQ": "Parvathipuram",
+          "Old District": "Vizianagaram",
+          "district_id": "parvathipuram_manyam"
+      }
+  ]
+
+  const Sp = [
+      {
+          "sl_no": 1,
+          "zone": "Zone 1",
+          "district": "Srikakulam",
+          "name_of_the_sp": "G.R.Radhika",
+          "email_id": "sp@skl.appolice.gov.in",
+          "district_id": "srikakulam"
+      },
+      {
+          "sl_no": 2,
+          "zone": "Zone 1",
+          "district": "Vizianagaram",
+          "name_of_the_sp": "Smt. M.Deepika",
+          "email_id": "spvzm@appolice.gov.in",
+          "district_id": "vizianagaram"
+      },
+      {
+          "sl_no": 1,
+          "zone": "Zone 1",
+          "district": "Parvathipuram Manyam",
+          "name_of_the_sp": "Vikrant Patil",
+          "email_id": "sppvpmanyam@gmail.com",
+          "district_id": "parvathipuram_manyam"
+      },
+      {
+          "sl_no": 4,
+          "zone": "Zone 1",
+          "district": "Alluri Sitharama Raju",
+          "name_of_the_sp": "Tuhin Sinha",
+          "email_id": "sp.asr123@gmail.com",
+          "district_id": "alluri_sitharama_raju"
+      },
+      {
+          "sl_no": 5,
+          "zone": "Zone 1",
+          "district": "Visakhapatnam",
+          "name_of_the_sp": "Ravi Shankar",
+          "email_id": "cp@vspc.appolice.gov.in",
+          "district_id": "visakhapatnam"
+      },
+      {
+          "sl_no": 6,
+          "zone": "Zone 1",
+          "district": "Anakapalli",
+          "name_of_the_sp": "Gowthami Sali",
+          "email_id": "sppvpmanyam@gmail.com",
+          "district_id": "anakapalli"
+      },
+      {
+          "sl_no": 7,
+          "zone": "Zone 2",
+          "district": "Kakinada",
+          "name_of_the_sp": "Sathish Kumar",
+          "email_id": "sp@kkd.appolice.gov.in",
+          "district_id": "kakinada"
+      },
+      {
+          "sl_no": 8,
+          "zone": "Zone 2",
+          "district": "Dr. B.R. Ambedkar Konaseema",
+          "name_of_the_sp": "S. Sreedhar",
+          "email_id": "spkonaseema@gmail.com",
+          "district_id": "dr_b_r_ambedkar_konaseema"
+      },
+      {
+          "sl_no": 2,
+          "zone": "Zone 2",
+          "district": "East Godavari",
+          "name_of_the_sp": "Jagadeesh P",
+          "email_id": "sp@rjyu.appolice.gov.in",
+          "district_id": "east_godavari"
+      },
+      {
+          "sl_no": 10,
+          "zone": "Zone 2",
+          "district": "West Godavari",
+          "name_of_the_sp": "U.Ravi Prakash",
+          "email_id": "spwgbvrm@gmail.com",
+          "district_id": "west_godavari"
+      },
+      {
+          "sl_no": 11,
+          "zone": "Zone 2",
+          "district": "Eluru",
+          "name_of_the_sp": "D.Mary Prasanthi",
+          "email_id": "sp@wg.appolice.gov.in, westgodavarisp@gmail.com",
+          "district_id": "eluru"
+      },
+      {
+          "sl_no": 12,
+          "zone": "Zone 3",
+          "district": "Krishna",
+          "name_of_the_sp": "P.Joshua",
+          "email_id": "sp@kri.appolice.gov.in, spkrishnadist@gmail.com",
+          "district_id": "krishna"
+      },
+      {
+          "sl_no": 13,
+          "zone": "Zone 3",
+          "district": "NTR",
+          "name_of_the_sp": "Shri Kanthi Rana Tata",
+          "email_id": "cp@vza.appolice.gov.in",
+          "district_id": "ntr"
+      },
+      {
+          "sl_no": 14,
+          "zone": "Zone 3",
+          "district": "Guntur",
+          "name_of_the_sp": "K.Arif Hafeez",
+          "email_id": "sp@gtr.appolice.gov.in, guntururbansp@gmail.com",
+          "district_id": "guntur"
+      },
+      {
+          "sl_no": 15,
+          "zone": "Zone 3",
+          "district": "Bapatla",
+          "name_of_the_sp": "Sri Vakul Jindal",
+          "email_id": "sp@bpt.appolice.gov.in",
+          "district_id": "bapatla"
+      },
+      {
+          "sl_no": 16,
+          "zone": "Zone 3",
+          "district": "Palnadu",
+          "name_of_the_sp": "Sri Y. Ravi Sankara Reddy",
+          "email_id": "spgunturrural@gmail.com",
+          "district_id": "palnadu"
+      },
+      {
+          "sl_no": 17,
+          "zone": "Zone 4",
+          "district": "Prakasam",
+          "name_of_the_sp": "Malika Garg",
+          "email_id": "spongole@gmail.com",
+          "district_id": "prakasam"
+      },
+      {
+          "sl_no": 18,
+          "zone": "Zone 4",
+          "district": "Sri Potti Sriramulu Nellore",
+          "name_of_the_sp": "K.Tirumaleswar Reddy",
+          "email_id": "nelloresp@gmail.com",
+          "district_id": "sri_potti_sriramulu_nellore"
+      },
+      {
+          "sl_no": 19,
+          "zone": "Zone 5",
+          "district": "Kurnool",
+          "name_of_the_sp": "G. Krishnakanth",
+          "email_id": "spkurnool.kur@gmail.com",
+          "district_id": "kurnool"
+      },
+      {
+          "sl_no": 20,
+          "zone": "Zone 5",
+          "district": "Nandyal",
+          "name_of_the_sp": "Sri K.Raghuveera Reddy",
+          "email_id": "spnandyal.official@gmail.com",
+          "district_id": "nandyal"
+      },
+      {
+          "sl_no": 21,
+          "zone": "Zone 5",
+          "district": "Ananthapuramu",
+          "name_of_the_sp": "Anburajan Kkn",
+          "email_id": "spatp1@gmail.com",
+          "district_id": "ananthapuramu"
+      },
+      {
+          "sl_no": 3,
+          "zone": "Zone 5",
+          "district": "Sri Sathya Sai",
+          "name_of_the_sp": "S.V. Madhav Reddy",
+          "email_id": "spsss1ptp@gmail.com",
+          "district_id": "sri_sathya_sai"
+      },
+      {
+          "sl_no": 23,
+          "zone": "Zone 5",
+          "district": "YSR Kadapa",
+          "name_of_the_sp": "Siddharth Kaushal",
+          "email_id": "spkadapa2014@gmail.com",
+          "district_id": "ysr_kadapa"
+      },
+      {
+          "sl_no": 24,
+          "zone": "Zone 4",
+          "district": "Annamayya",
+          "name_of_the_sp": "B.Krishna Rao",
+          "email_id": "spannamayyadistrict@gmail.com",
+          "district_id": "annamayya"
+      },
+      {
+          "sl_no": 25,
+          "zone": "Zone 4",
+          "district": "Chittoor",
+          "name_of_the_sp": "Y.Rishanth Reddy",
+          "email_id": "spctr@appolice.gov.in, apchittoor@gmail.com",
+          "district_id": "chittoor"
+      },
+      {
+          "sl_no": 26,
+          "zone": "Zone 4",
+          "district": "Tirupati",
+          "name_of_the_sp": "Sri P Parameshwar Reddy",
+          "email_id": "sptpturban@gmail.com",
+          "district_id": "tirupati"
+      }
+  ]
 
   const officers = [
     {
@@ -337,9 +805,16 @@ const Home = () => {
 
     console.log(districtId)
     let o  = officers.find((i)=>i['district_id'].toLowerCase()==districtId.toLowerCase());
+    let e = Sp.find((i)=>i['district_id'].toLowerCase()==districtId.toLowerCase());
+    let u = Ewm.find((i)=>i['district_id'].toLowerCase()==districtId.toLowerCase());
     setDistrictContent(o)
+    setDistrictSP(e)
+    setDistrictEWM(u)
+
     if(districtId=="") {
       setDistrictContent(undefined);
+      setDistrictSP(undefined);
+      setDistrictEWM(undefined);
     }
   }
 
@@ -353,7 +828,7 @@ const Home = () => {
     content =  <Table striped bordered size="sm">
 
       <thead>
-      <h6>Election officers</h6>
+      <h6>District Election officers</h6>
         <tr>
           
           <td>Name</td>
@@ -368,6 +843,63 @@ const Home = () => {
         <td>{d.d["Designation"]}</td>
         <td>{d.d["Mobile No"]}</td>
         <td>{d.d["E-mail"]}</td>
+      </tr>
+    </tbody>
+
+    </Table>
+
+    }
+    return  <>{content}</>
+  }
+
+  const SPolice = (d: any) =>{
+    
+    let content
+
+    if(d && d.d) {
+
+    content =  <Table striped bordered size="sm">
+
+      <thead>
+      <h6>Superintendent of Police</h6>
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{d.d["name_of_the_sp"]}</td>
+        <td>{d.d["email_id"]}</td>
+      </tr>
+    </tbody>
+
+    </Table>
+
+    }
+    return  <>{content}</>
+  }
+
+  const EWatch = (d: any) =>{
+    
+    let content
+
+    if(d && d.d) {
+
+    content =  <Table striped bordered size="sm">
+
+      <thead>
+      <h6>Election Watch Members</h6>
+        <tr>
+          
+          <td>Name</td>
+          <td>Email</td>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{d.d["Name"]}</td>
+        <td>{d.d["Email"]}</td>
       </tr>
     </tbody>
 
@@ -406,6 +938,8 @@ const Home = () => {
               <RightContainer d={districtContent}/>
               <h3>{districtId}</h3>
               <Deo d={districtContent} />
+              <SPolice d={districtSP}/>
+              <EWatch d={districtEWM}/>
               </Col>
             </Row>
             <Row>
