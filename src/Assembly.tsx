@@ -222,13 +222,15 @@ const Assembly = () => {
       <tr>
         <th>RO Name</th>
         <th>Contact</th>
+        <th>Email</th>
         
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>{defaultro?.ero_name}</td>
-        <td>{defaultro?.mobile_no}</td>       
+        <td>{defaultro?.mobile_no}</td> 
+        <td>{defaultro?.email}</td>        
       </tr>
     </tbody>
   </Table>
