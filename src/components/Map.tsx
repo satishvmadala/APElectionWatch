@@ -106,13 +106,11 @@ const Map: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
             .style("top", `${event.pageY - 40}px`);
         })
         .on("click", (event: any, d: any) => {
-          console.log(event.type, d)
          // let id = d.properties.ac_name;
           //id = id.toString();
           let districtId = d.properties.district_id
           let districtName = d.properties.district_name
           //let loksabhaName = d.properties.loksabha_constituency_name
-          console.log('distrnanem', districtName)
           mapClick( d.properties.district_id, districtName);
           tooltip.transition()
               .duration(200)

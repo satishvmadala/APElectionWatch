@@ -211,7 +211,6 @@ const Assembly = () => {
 
   const MapBottomContainer = ({clsName})=>{
 
-    console.log(districtId, constituencyDSPData)
 
     const district = constituencyDSPData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
     const defaultro = constituencyROData.find((i)=>i.district_id.toLowerCase() == districtId.toLowerCase())
