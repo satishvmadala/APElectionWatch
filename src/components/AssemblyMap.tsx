@@ -87,7 +87,6 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
         //   mapClick(id)
         // })
         .on("mouseover", (event: any, d: any) => {
-          console.log(event.type)
           let id = d.properties.ac_name;
           id = id.toString();
           let districtId = d.properties.district_id
@@ -106,14 +105,14 @@ const AssemblyMap: React.FC<MapProps> = ({ link, map, mapClick, propName }) => {
           
       })
       .on("click", (event: any, d: any) => {
-        console.log(event.type)
         let id = d.properties.ac_name;
         id = id.toString();
         let districtId = d.properties.district_id
         let districtName = d.properties.district_name
         let loksabhaName = d.properties.loksabha_constituency_name
-        console.log('distrnanem', districtName)
-        mapClick(id, d.properties.district_id, districtName,loksabhaName);
+
+        console.log(id, d.properties.district_id, districtName)
+        mapClick(d.properties.constituency_id, d.properties.district_id, districtName,loksabhaName);
         tooltip.transition()
             .duration(200)
             .style("display", "block");
