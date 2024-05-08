@@ -4,6 +4,9 @@ import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import AndhraData from './components/datasets/Final_Andhra_Constituencies_2024.json';
+
+import APDistrictsData from './components/datasets/AP_Districts_Final.json';
+
 import { FaSearch } from "react-icons/fa";
 
 
@@ -34,13 +37,13 @@ export function DistrictFilter({mapClick}) {
         </Form>
         {search && showFilterData && (
           <ul className="list-group position-absolute">
-          {AndhraData
+          {APDistrictsData
             .filter((item) => {
               return search.toLowerCase() === ''
                 ? item
                 : item.district_name.toLowerCase().includes(search);
             })
-            .slice(0,1)
+            .slice(0,5)
             .map((item, index) => (
               <li className="list-group-item" key={index} onClick={ ()=>{ selectDristrict(item) }}>
                 {item.district_name} District
