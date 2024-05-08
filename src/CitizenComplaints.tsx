@@ -20,10 +20,10 @@ export default function CC () {
       <AppNav />
     </div>
     <div className='side-cont-div'>
-      <Container>
+      <Container className='mt-5'>
       
         <Row>
-          <Col>
+          <Col className='pt-5'>
         <iframe
          
         src="https://docs.google.com/forms/d/e/1FAIpQLScqEQO-JeNxE54lYRJ-ySR4ukDsVuc0m0EqKuaEG9MSzz-l6A/viewform?embedded=true" 
