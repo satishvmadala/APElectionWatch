@@ -41,7 +41,7 @@ export function DistrictFilter({mapClick}) {
             .filter((item) => {
               return search.toLowerCase() === ''
                 ? item
-                : item.district_name.toLowerCase().includes(search);
+                : item.district_name.toLowerCase().includes(search.toLowerCase());
             })
             .slice(0,5)
             .map((item, index) => (
@@ -91,7 +91,7 @@ function App({mapClick}) {
             .filter((item) => {
               return search.toLowerCase() === ''
                 ? item
-                : item.ac_name.toLowerCase().includes(search);
+                : item.ac_name.toLowerCase().includes(search.toLowerCase());
             })
             .slice(0,5)
             .map((item, index) => (
