@@ -489,8 +489,8 @@ const Assembly = () => {
         </div>
         <div className='side-cont-div'>
           <Container>
-            <div className='mt-sm-5 mt-md-0'>
-            <div className='pt-sm-5 pt-md-0'>
+            <div className='mt-5 mt-md-0'>
+            <div className='pt-5 pt-md-0'>
 
             <Filter mapClick={mapClick} />
             </div>
